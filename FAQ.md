@@ -90,8 +90,15 @@
 ### Q：抖音和TikTok、快手和部分APP刚开始启动时声音断断续续，看起来很卡？
 >部分APP是在安装时执行dex2oat，表现为安装时间久；部分app（如抖音、TikTok、快手、微信、企业微信）是在安装后首次启动时执行dex2oat编译程序，dex2oat会把cpu全部占满，持续约几分钟，表现为声音断断续续、又像网络卡顿，后续使用时不再执行dex2oat，占用CPU也很少。
 
+### Q：TikToK注册时提示”sorry，looks like you are not eligible for TikTok“  没有资格注册怎么办？
+> 1）填写生日应该大于13周岁
+> 
+> 2）可以尝试长按TikTok图标->感叹号或App info -> Storage -> 点击CLEAR STORAGE和CLEAR CACHE 来清空缓存数据
+
 ### Q：TikToK登录时提示”Too many attemps，try again later“ 怎么办？
 > 可以尝试长按TikTok图标->感叹号或App info -> Storage -> 点击CLEAR STORAGE和CLEAR CACHE 来清空缓存数据
+
+
 
 > 也可以过段时间再尝试登录
 
