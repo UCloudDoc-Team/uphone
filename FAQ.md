@@ -43,11 +43,9 @@
 
 ### 如何用客户端连接云手机？
 
->目前暂未推出正式的安卓和IOS 客户端，可以先用二维码中的客户端Demo进行简单连接操作
->操作步骤：
->1. 从控制台获取云手机的“资源ID”   2. 在客户端Demo的云手机里输入“资源ID” 即可连接
->
-><img width="442" alt="云游戏体验版" src="https://user-images.githubusercontent.com/5512170/174747334-1b3c3a11-2830-427e-b553-b81f88af1536.png">
+><img width="1291" alt="企业微信截图_b6b9f3c5-33b0-474a-a14c-4115b49857d6" src="https://user-images.githubusercontent.com/5512170/178957287-080f37ce-7fdf-46de-9264-ebb1721879e5.png">
+
+
 
 ### 客户端看带宽有时2Mbps，有时几十百Kbps，是不稳定吗？
 > 这是正常的，webrtc有动态码率能力，画面静止或变化少时传输量会减少、带宽占用低， 如果画面巨大变化时带宽仍然非常低是不正常的。
