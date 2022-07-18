@@ -11,6 +11,7 @@
    * [创建云手机](/uphone/guide.md#创建云手机)
    * [独立IP与共享带宽](/uphone/guide.md#独立公网IP)
    * [产品计费](/uphone/price-uphone.md#产品计费)
+   * [ADB连接](/uphone/ADB.md#ADB连接)
 
 * 群控管理
     * [文件上传](/uphone/guide.md#文件上传)
