@@ -20,6 +20,7 @@
   * [文件上传](/uphone/guide.md#文件上传)
   * [独立公网IP](/uphone/guide.md#独立公网IP)
   * [使用AOSP功能](/uphone/_sysapplication.md)
+  * [ADB连接](/uphone/ADB.md#ADB连接)
  
 ### 常见问题
    * [功能相关](/uphone/FAQ.md#功能相关)
