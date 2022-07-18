@@ -17,3 +17,5 @@
 #### 查看连接是否成功：adb devices。
 #### 截图以CentOS操作系统为示例：
 ![img](images/ADB.png)
+
+
