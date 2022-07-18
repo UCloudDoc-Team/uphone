@@ -8,7 +8,7 @@
 #### 说明 ：
 #### 默认情况下，ADB 服务器生成的密钥对以 adbkey（私钥）和 adbkey.pub（公钥）的形式存储在以下密钥存储库目录中。
 * Linux操作系统，文件位置为：~/.android
-* Windows 操作系统，文件位置为：C:\Users\%USERNAME% \.android
+* Windows 操作系统，文件位置为：C:\Users\%USERNAME%\.android
 * MacOS 操作系统，文件位置为：~/.android
 >如将密钥删除，或想重新生成密钥对，可先执行：adb kill-server，再执行：adb devices。
 
