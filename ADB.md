@@ -14,3 +14,4 @@
 #### 执行ADB命令：adb connect $ip:49863，创建与云手机的ADB连接。($ip：导入公钥后控制台可查看)
 #### 查看连接是否成功：adb devices。
 #### 截图以CentOS操作系统为示例：
+ ![img](images/ADB.png)
