@@ -13,7 +13,7 @@
 >如将密钥删除，或想重新生成密钥对，可先执行：adb kill-server，再执行：adb devices。
 
 ### 三、连接
-#### 执行ADB命令：adb connect $ip:49863，创建与云手机的ADB连接。($ip：导入公钥后控制台可查看)
+#### 执行ADB命令：adb connect $ip:49863，创建与云手机的ADB连接。($ip：导入公钥后控制台可查看$ip:$port)
 #### 查看连接是否成功：adb devices。
 #### 截图以CentOS操作系统为示例：
 ![img](images/ADB.png)
