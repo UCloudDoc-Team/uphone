@@ -1,5 +1,16 @@
 ## ADB连接
-
+### 控制台操作
+>把下列【环境配置】中生成的公钥进行导入。
+### 一、单个手机或者批量手机导入
+#### 1、单个手机导入
+![img](images/singleimport.png)
+#### 2、批量手机导入
+![img](images/batchimport.png)
+### 二、选择【下一步】
+![img](images/ADBnext.png)
+### 三、点击【确定】
+![img](images/ADBcommit.png)
+### 环境配置
 ### 一、下载ADB工具
 #### 访问：https://developer.android.com/studio/releases/platform-tools, 下载对应平台的文件并解压。
 
