@@ -91,13 +91,12 @@
 >部分APP是在安装时执行dex2oat，表现为安装时间久；部分app（如抖音、TikTok、快手、微信、企业微信）是在安装后首次启动时执行dex2oat编译程序，dex2oat会把cpu全部占满，持续约几分钟，表现为声音断断续续、又像网络卡顿，后续使用时不再执行dex2oat，占用CPU也很少。
 
 ### Q：TikToK注册时提示”sorry，looks like you are not eligible for TikTok“  没有资格注册怎么办？
-> 1）填写生日应该大于13周岁
-> 
-> 2）可以尝试长按TikTok图标->感叹号或App info -> Storage -> 点击CLEAR STORAGE和CLEAR CACHE 来清空缓存数据
+> 1）填写生日应该大于18周岁，虽然注册是13岁以上，后边开店还需要18岁以上
+> 2）使用新注册的gmail账户时，用gmail客户端登录验证收发邮件是否正常，google有时会disable新注册的账户，需要申诉通过
+> 3）可以尝试长按TikTok图标->感叹号或App info -> FORCE STOP关闭应用， 再点击Storage -> 点击CLEAR STORAGE和CLEAR CACHE 来清空缓存数据
 
 ### Q：TikToK登录时提示”Too many attemps，try again later“ 怎么办？
-> 可以尝试长按TikTok图标->感叹号或App info -> Storage -> 点击CLEAR STORAGE和CLEAR CACHE 来清空缓存数据
-
+> 可以尝试长按TikTok图标->感叹号或App info -> FORCE STOP关闭应用， 再点击Storage -> 点击CLEAR STORAGE和CLEAR CACHE 来清空缓存数据，然后再登录
 
 
 > 也可以过段时间再尝试登录
