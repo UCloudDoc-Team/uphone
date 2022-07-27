@@ -97,7 +97,7 @@
 > 
 > 3）可以尝试长按TikTok图标->感叹号或App info -> FORCE STOP关闭应用， 再点击Storage -> 点击CLEAR STORAGE和CLEAR CACHE 来清空缓存数据
 > 
-> 4）也可以过几个小时至一天再尝试登录
+> 4）也可以过几个小时至一天再尝试注册
 
 ### Q：TikToK登录时提示”Too many attemps，try again later“ 怎么办？
 > 1）可以尝试长按TikTok图标->感叹号或App info -> FORCE STOP关闭应用， 再点击Storage -> 点击CLEAR STORAGE和CLEAR CACHE 来清空缓存数据，然后再登录
