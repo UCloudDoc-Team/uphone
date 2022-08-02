@@ -97,12 +97,14 @@
 > 
 > 3）可以尝试长按TikTok图标->感叹号或App info -> FORCE STOP关闭应用， 再点击Storage -> 点击CLEAR STORAGE和CLEAR CACHE 来清空缓存数据
 > 
-> 4）也可以过几个小时至一天再尝试注册
+> 4）可以尝试卸载，从google play中安装最新的版本
+> 
+> 5）也可以过几个小时至一天再尝试注册
 
 ### Q：TikToK登录时提示”Too many attemps，try again later“ 怎么办？
 > 1）可以尝试长按TikTok图标->感叹号或App info -> FORCE STOP关闭应用， 再点击Storage -> 点击CLEAR STORAGE和CLEAR CACHE 来清空缓存数据，然后再登录
 > 
-> 2）也可以过几个小时至一天再尝试登录
+> 2）可以尝试卸载，从google play中安装最新的版本，也可以过几个小时至一天再尝试登录
 > 
 > 3) 注册后尽量不要退出再登录切换账号，尤其是gmail账号注册泛滥更容易被限制，个人用户一般就1个账号，切换多个账号更像是营销行为
 > 
