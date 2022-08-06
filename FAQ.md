@@ -115,9 +115,12 @@
 > 4) 确保一机一号一地域，不要一个账号跨地域使用，人不可能在短时间内出现在另一个国家 
 
 ### Q：TikToK出现”Tiktok isn't responding“ 怎么办？
-> 可以登录google play升级到最新版本的Tiktok
+> 可以登录google play升级到最新版本的Tiktok, 查看Tiktok版本的方式：Profile->右上角三->拉到最底部的25.5.4就是
 > 
-> 查看Tiktok版本的方式：Profile->右上角三-> 拉到最底部的25.5.4就是
+> 如果还是会出现，可以提给技术支持反馈给我们，临时解决办法：点击桌面图标（房屋图标）-> 点击加速图标（小火箭) 可关闭tiktok-> 再打开tiktok
+
+<img width="338" alt="企业微信截图_e13e2298-0e40-4102-864e-d06ec28d41d0" src="https://user-images.githubusercontent.com/5512170/183238296-f6ade6cf-6b3c-4976-94ba-2a36700ba438.png">
+
 
 
 ### Q：TikTok获得点击量有什么要注意的？
