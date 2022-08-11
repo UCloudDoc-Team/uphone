@@ -121,7 +121,14 @@
 
 <img width="338" alt="企业微信截图_e13e2298-0e40-4102-864e-d06ec28d41d0" src="https://user-images.githubusercontent.com/5512170/183238296-f6ade6cf-6b3c-4976-94ba-2a36700ba438.png">
 
-
+### Q：TikToK无法follow关注他人怎么办？
+> 1) 邮箱可能没验证：确保注册的邮箱已经验证过， 在Tiktok设置里-> Settings and privacy -> Manage account -> Email -> 确保邮箱没有出现红色的"not verified"
+> 
+> 2) 账号方面：增加手机号，绑定facebook、instgram等账号
+> 
+> 3）设备方面：执行一键新机后再登录，相当于换了一台手机设备，TK算法会重新计算
+> 
+> 4）行为方面：不要短时间内频繁点赞关注，在inbox里回关他人，注重完播率、观看某用户的多个视频、搜索话题，查看一些shop店铺信息，多做一些过去没有的操作
 
 ### Q：TikTok获得点击量有什么要注意的？
 > 1）新账号注册后不要直接上传视频、不要大量关注点赞（急功近利容易被标记为营销号），冷却几天再像正常用户一样每天点击、上传2-3个优质视频
