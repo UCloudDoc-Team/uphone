@@ -42,10 +42,10 @@ iOS SDK
   * [注意事项](/uphone/ios_sdk.md#注意事项)
  
 JS SDK 
-  * [SDK下载](/uphone/h5-sdk.md#SDK下载)
-  * [快速入门](/uphone/h5-sdk.md#快速入门)
-  * [接口说明](/uphone/h5-sdk.md#接口说明)
-  * [错误码表](/uphone/h5-sdk.md#常见错误码)
+  * [SDK下载](/uphone/js-sdk.md#SDK下载)
+  * [快速入门](/uphone/js-sdk.md#快速入门)
+  * [接口说明](/uphone/js-sdk.md#接口说明)
+  * [错误码表](/uphone/js-sdk.md#常见错误码)
  
 
  ### 其他
