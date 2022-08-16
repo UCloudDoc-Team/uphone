@@ -322,6 +322,65 @@ BOOL mute1 = [self setAudioMute:YES];
 BOOL mute2 = [self setAudioMute:NO];
 ```
 注：self是UPhoneVideoViewController的子类
+### 连接云手机失败原因
+连接云手机失败原因，在此方法内可调用重连方法进行重连云手机操作
+
+函数原型
+```
+- (void)clickConnectUPhoneErrorAction:(NSString *)errorStr;
+```
+
+
+示例代码
+```
+- (void)clickConnectUPhoneErrorAction:(NSString *)errorStr {
+    if (errorStr.length > 0) {
+        NSLog(@"%@",errorStr);
+        _timerStr++;
+        if (_timerStr ==RepeatTimes) {
+            UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"错误报告" message:[NSString stringWithFormat:@"%@",errorStr] preferredStyle:UIAlertControllerStyleAlert];
+            UIAlertAction *conform = [UIAlertAction actionWithTitle:@"确认" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
+                [self disConnectUPhone];
+                
+            }];
+            UIAlertAction *cancel = [UIAlertAction actionWithTitle:@"取消" style:UIAlertActionStyleCancel handler:^(UIAlertAction * _Nonnull action) {
+                
+            }];
+            [alert addAction:conform];
+            [alert addAction:cancel];
+            
+            [self presentViewController:alert animated:YES completion:nil];
+        }else if (_timerStr < RepeatTimes){
+            sleep(2);
+            [UPhoneService reconnetUPhone];//可根据自己的实际情况进行重连次数限制，当前限制5次重连
+        }
+ 
+    }
+}
+```
+注：UPhoneVideoViewController的子类中重写以上方法获取失败原因,如果该方法被调用并且errorStr有值说明连接失败（根据自己需求进行下一步操作），反之连接成功。
+### 云手机连接保活
+云手机连接保活，防止手机息屏以及切换到其他app返回时连接断开问题
+
+函数原型
+```
+- (void)applicationWillResignActive:(NSNotification *)notify;
+```
+
+示例代码
+在项目的AppDelegate中写入如下代码：
+```
+- (void)applicationWillResignActive:(UIApplication *)application {
+    [[NSNotificationCenter defaultCenter] postNotificationName:@"applicationWillResignActive" object:nil];
+}
+```
+在项目的UPhoneVideoViewController的子类中写入如下通知代码：
+```
+ [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(applicationWillResignActive:) name:@"applicationWillResignActive" object:nil];
+
+- (void)applicationWillResignActive:(NSNotification *)notify{  
+}
+```
 ## 注意事项
 1.该SDK仅支持iOS10以上系统。
 
