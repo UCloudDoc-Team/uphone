@@ -2,23 +2,23 @@
 
 |  SDK   | ZIP包 | GitHub |
 | :----: | :---: | :----: |
-| H5 SDK | [下载](http://uphone-client.cn-wlcb.ufileos.com/sdk/uphone-h5-sdk.zip)  |    [GitHub 下载](https://github.com/ucloud/uphone-h5-sdk.git)    |
+|JS SDK | [下载](http://uphone-client.cn-wlcb.ufileos.com/sdk/uphone-h5-sdk.zip)  |    [GitHub 下载](https://github.com/ucloud/uphone-h5-sdk.git)    |
 
 # 概述
 
-欢迎使用H5 UPhone SDK ，产品能够为开发者提供更便捷接入、高可靠的云手机服务，让开发者快速搭建实时项目。开发者可在H5 UPhone SDK提供的功能基础上开发新功能，同时还可结合官方提供的配套demo进一步了解内置功能，应用场景广阔，开发简单易懂。
+欢迎使用JS UPhone SDK ，产品能够为开发者提供更便捷接入、高可靠的云手机服务，让开发者快速搭建实时项目。开发者可在JS UPhone SDK提供的功能基础上开发新功能，同时还可结合官方提供的配套demo进一步了解内置功能，应用场景广阔，开发简单易懂。
 
 # 快速入门 
 
 ### 准备环境
 
-在开始集成H5 UPhone SDK前，请确保开发环境满足一下要求：
+在开始集成JS UPhone SDK前，请确保开发环境满足一下要求：
 
 •  准备一台可以连接到互联网的Windows或macOS计算机。
 
 •  使用最新版本的Chrome浏览器。
 
-•  网页执行H5标准。
+•  H5网页开发执行H5标准。
 
 •  viewport设置不可缩放。
 
@@ -34,17 +34,18 @@
 
 ![img](images/h5-img3.png)
 
- 说明：在创建引擎之前，开发者需定义一个id为phone-video的video标签，SDK会在这个元素内加载音视频。video标签设置autoplay、playsinline、webkit-playsinline属性。
+ 说明：在创建引擎之前，开发者需定义video标签固定ID(H5端id="phone-video";WEB端id="remote-video"),SDK会在这个元素内加载音视频。video标签设置autoplay、playsinline、webkit-playsinline属性。文档代码为H5开发示例。
 
 示例代码 
 
 ```html
 <div>
+    //H5 示例
     <video id="phone-video" autoplay="autoplay" playsinline webkit-playsinline></video>
   </div>
-<script src="./uphone-sdk/proto.js"></script>
+<script src="./sdk/proto.js"></script>
 <script type="module">
-import controller from "../uphone-sdk/controller.js "; //文件路径不固定
+import controller from "../sdk/controller.js "; //文件路径不固定
 </script>
 
 ```
@@ -61,9 +62,9 @@ var Controller = new controller(loadingParams)
 <div>
     <video id="phone-video" autoplay="autoplay" playsinline webkit-playsinline></video>
   </div>
-<script src="./uphone-sdk/proto.js"></script>
+<script src="./sdk/proto.js"></script>
 <script type="module">
-import controller from "../uphone-sdk/controller.js "; //文件路径不固定
+import controller from "../sdk/controller.js "; //文件路径不固定
 //----第一步初始化SDK----
 var loadingParams = {
         Id: "替换为可用ID", 
