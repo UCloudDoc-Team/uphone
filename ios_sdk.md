@@ -379,6 +379,7 @@ BOOL mute2 = [self setAudioMute:NO];
  [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(applicationWillResignActive:) name:@"applicationWillResignActive" object:nil];
 
 - (void)applicationWillResignActive:(NSNotification *)notify{  
+[self applicationWillResignActive];
 }
 ```
 ## 注意事项
