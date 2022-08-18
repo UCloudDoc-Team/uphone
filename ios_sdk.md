@@ -418,6 +418,24 @@ BOOL mute2 = [self setAudioMute:NO];
 ```
 注：注意区分SceneDelegate和AppDelegate。
 
+### 设置音量
+设置音量
+
+函数原型
+```
+- (void)setVolume:(int)volume;
+```
+传入参数说明:int类型参数
+
+1：音量加1
+-1：音量减1
+
+示例代码
+```
+[self setVolume:1];
+```
+注：self是UPhoneVideoViewController的子类
+
 ## 注意事项
 1.该SDK仅支持iOS10以上系统。
 
