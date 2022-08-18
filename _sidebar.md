@@ -89,6 +89,7 @@
         * [静音开关功能](/uphone/ios_sdk.md#静音开关功能)
         * [云手机连接失败原因](/uphone/ios_sdk.md#云手机连接失败原因)
         * [云手机连接保活](/uphone/ios_sdk.md#云手机连接保活)
+        * [设置音量](/uphone/ios_sdk.md#设置音量)
         * [注意事项](/uphone/ios_sdk.md#注意事项)
  * H5 SDK (移动端)
      * [接入步骤](/uphone/h5-sdk.md#快速入门amp集成SDK)
