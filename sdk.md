@@ -73,21 +73,29 @@ implementation "com.google.code.gson:gson:2.8.2"
 iUPhone.registerUphoneListener(mUPhoneListener);
 private final IUPhoneListener mUPhoneListener = new IUPhoneListener() {
     @Override
-    public void onConnectionFailure(String s) {            
-    }
-    @Override
     public void onConnectionSuccess() {
     }
     @Override
-    public void onControlMsgCallback(String type, int result, String error) {           
+    public void onConnectionFailure(int errorCode, String errorMsg) {            
     }
+    @Override
+    public void onDrawFirstFrame() {
+    }
+     @Override
+     public void onChannelStatus(String status) {
+     }
+     @Override
+     public void onChannelMessage(byte[] msg) {
+     } 
+     @Override
+     public void onControlResult(int type, int code, String message) {           
+     }
 };
 
 ```
 >注:  
-      type:setresolution、startlive、stoplive、startgame等操作类型       
-      result: 0表示成功，其他表示失败       
-      error: 成功时此为空，失败时为具体错误信息
+    code: 0表示成功，其他表示失败
+    message: 成功时此为空，失败时为具体错误信息
 
 ### 初始化云手机sdk
 >iUPhone.initSdk(bundle, initCallBackListener);
@@ -178,7 +186,7 @@ void setResolution(int resolution);
 
 | 参数            | 类型             | 意义            |
 |:-------- |:-------- |:-------- |
-|  resolution  |  int  | 0：480×960P,    //0 标清<br>3：720×1440P,   //3 高清<br>6：1080×2160P,  //6 超清 |
+|  resolution  |  int  | 0：标清<br>3：高清<br> |
 
 ### 发送指定按键
 void sendKeyByName(String keyName);      
@@ -187,12 +195,12 @@ void sendKeyByName(String keyName);
 
 | 参数            | 类型             | 意义                                      |
 |:------------ |:------------ |:----------------------- |
-|  keyName  |  String  |  “home” 返回主桌面<br>“clean” 清除后台应用<br>“menu” 菜单按键<br>“back”  返回按键 |
+|  keyName  |  String  |  “home” 返回主桌面<br>“clean” 清除后台应用<br>“back”  返回按键 |
 
 ### 设置静音
-void setAudioMute(boolean mute);
-功能描述：设置云手机静音，非本地静音
-参数描述：
+void setAudioMute(boolean mute);<br>
+功能描述：设置云手机静音，非本地静音<br>
+参数描述：<br>
 	
 | 参数            | 类型             | 意义            |
 |:-------- |:-------- |:-------- |
@@ -238,7 +246,7 @@ double getNetworkSpeed();
 参数说明：返回值是两位小数的double类型，单位是MB/s
 
 ### 获取用户最后一次操作时间戳
-long  getLastOperationTimestamp ();      
+long  getLastOperationTimestamp();      
 功能说明：游戏启动后，通过该接口获取用户最后一次操作实例的时间戳     
 参数说明：返回值是long类型的时间戳，单位：ms
 
@@ -247,7 +255,17 @@ String getVersionCode();
 功能描述：获得SDK版本号      
 返回值： String类型参数
 
+### 设置音量
+void setVolume(int val);<br>
+功能描述：设置手机音量<br>
+参数描述：<br>
+| 参数            | 类型             | 意义            |
+|:-------- |:-------- |:-------- |
+|  val  |  int  | 1：增加音量<br> -1：减小音量 |
 
+### 唤醒屏幕
+Void wakeupScreen();     
+功能描述：当长时间无操作时，屏幕可能会自动处于屏保状态，表现为黑屏，此时可调用接口进行唤醒。
 
 
 
