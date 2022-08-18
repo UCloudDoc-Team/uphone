@@ -101,6 +101,33 @@ videoCallViewController.token = @"123456";
 [self setUPhoneResolution: resolution];
 ```
 注：self是UPhoneVideoViewController的子类
+
+### 查询设置分辨率结果
+查询设置UPhone分辨率的结果
+
+函数原型
+```
+- (void)clickSetResolutionMessageAction:(NSString *)message;
+```
+| 返回参数            | 类型             | 意义            |
+|:-------- |:-------- |:------- |
+|message|NSString|高清    // 设置高清成功<br>标清   // 设置标清成功<br>失败  // 设置分辨率失败 |
+
+示例代码
+```
+- (void)clickSetResolutionMessageAction:(NSString *)message {
+    if ([message isEqualToString:@"高清"]) {
+        [[NSUserDefaults standardUserDefaults] setObject:@"高清" forKey:@"test_Definition"];
+        NSLog(@"分辨率修改为高清");
+    }else if ([message isEqualToString:@"标清"]){
+        [[NSUserDefaults standardUserDefaults] setObject:@"标清" forKey:@"test_Definition"];
+        NSLog(@"分辨率修改为标清");
+    }else{
+        NSLog(@"分辨率设置失败");
+    }
+}
+```
+注：UPhoneVideoViewController的子类中重写以上方法获取设置分辨率成功与否状态。
 ### 获取网络延时
 函数原型
 ```
@@ -368,7 +395,14 @@ BOOL mute2 = [self setAudioMute:NO];
 ```
 
 示例代码
-在项目的AppDelegate中写入如下代码：
+
+如果项目中包含SceneDelegate则需要在SceneDelegate.m中写入以下代码：
+```
+- (void)sceneWillResignActive:(UIScene *)scene{
+    [[NSNotificationCenter defaultCenter] postNotificationName:@"applicationWillResignActive" object:nil];
+}
+```
+如果项目中不包含SceneDelegate则在项目的AppDelegate.m中写入如下代码：
 ```
 - (void)applicationWillResignActive:(UIApplication *)application {
     [[NSNotificationCenter defaultCenter] postNotificationName:@"applicationWillResignActive" object:nil];
@@ -382,6 +416,8 @@ BOOL mute2 = [self setAudioMute:NO];
 [self applicationWillResignActive];
 }
 ```
+注：注意区分SceneDelegate和AppDelegate。
+
 ## 注意事项
 1.该SDK仅支持iOS10以上系统。
 
