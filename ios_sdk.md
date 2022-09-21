@@ -76,7 +76,6 @@ videoCallViewController.token = @"123456";
 ```
 UTestVideoViewController *videoCallViewController =
     [[UTestVideoViewController alloc] initWithprojectId:@"xxxx" publicKey:@"xxxx" privateKey:@"xxxx" appVersionId:@"xxxx"];
-    videoCallViewController.token = @"123456";
 ```
 ## 接口说明
 ### 连接云手机
