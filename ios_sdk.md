@@ -35,12 +35,15 @@ Target中所需配置如下：
 
 | 重要接口            | 接口含义             | 建议调用时机            |
 |:-------- |:-------- |:------- |
-|initWithUphone|初始化SDK|连接云手机需要展示云手机界面时|
+|initWithUphone|初始化云手机|连接云手机需要展示云手机界面时|
+|initWithprojectId:publicKey:privateKey:appVersionId:|初始化云游戏|连接云游戏需要展示云游戏界面时|
 
 说明：
 SDK 使用前请对工程进行配置，否则 SDK 不生效。
 
 ### 初始化SDK
+#### 初始化云手机
+
 函数原型
 ```
 - (instancetype)initWithUphone:(NSString *)uphoneId;
@@ -54,6 +57,26 @@ SDK 使用前请对工程进行配置，否则 SDK 不生效。
 ```
 UTestVideoViewController *videoCallViewController = [[UTestVideoViewController alloc] initWithUphone:phoneId];
 videoCallViewController.token = @"123456";
+```
+#### 初始化云游戏
+
+函数原型
+```
+- (instancetype)initWithprojectId:(NSString *)projectId publicKey:(NSString *)publicKey privateKey:(NSString *)privateKey appVersionId:(NSString *)appVersionId;
+```
+| 参数            | 类型             | 意义            |
+|:-------- |:-------- |:------- |
+|projectId |NSString|项目ID|
+|publicKey|NSString|公钥|
+|privateKey|NSString|私钥|
+|appVersionId|NSString|游戏ID|
+|token|NSString|连接访问校验值(注:如果调用api接口SetUPhoneToken进行了设置，此处为必填,否则填空)|
+
+示例代码
+```
+UTestVideoViewController *videoCallViewController =
+    [[UTestVideoViewController alloc] initWithprojectId:@"xxxx" publicKey:@"xxxx" privateKey:@"xxxx" appVersionId:@"xxxx"];
+    videoCallViewController.token = @"123456";
 ```
 ## 接口说明
 ### 连接云手机
@@ -435,6 +458,36 @@ BOOL mute2 = [self setAudioMute:NO];
 [self setVolume:1];
 ```
 注：self是UPhoneVideoViewController的子类
+
+### 创建云游戏实例失败原因
+连接云游戏失败时，先调用该方法查看是不是创建云游戏示例失败，如果成功再去调用- (void)clickConnectUPhoneErrorAction:(NSString *)errorStr 方法
+
+函数原型
+```
+- (void)clickConnectUGameErrorAction:(NSString *)errorStr;
+```
+
+示例代码
+```
+- (void)clickConnectUGameErrorAction:(NSString *)errorStr {
+    if (errorStr.length > 0) {
+        NSLog(@"%@",errorStr);
+        UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"错误报告" message:[NSString stringWithFormat:@"%@",errorStr] preferredStyle:UIAlertControllerStyleAlert];
+        UIAlertAction *conform = [UIAlertAction actionWithTitle:@"确认" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
+            [self dismissViewControllerAnimated:YES completion:nil];
+        }];
+        UIAlertAction *cancel = [UIAlertAction actionWithTitle:@"取消" style:UIAlertActionStyleCancel handler:^(UIAlertAction * _Nonnull action) {
+            
+        }];
+        [alert addAction:conform];
+        [alert addAction:cancel];
+        
+        [self presentViewController:alert animated:YES completion:nil];
+
+    }
+}
+```
+注：UPhoneVideoViewController的子类中重写以上方法获取失败原因,如果该方法被调用并且errorStr有值说明创建云游戏实例失败，反之创建云游戏实例成功。
 
 ## 注意事项
 1.该SDK仅支持iOS10以上系统。
