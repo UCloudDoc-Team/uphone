@@ -65,7 +65,9 @@
         * [导入SDK](/uphone/ios_sdk.md#导入SDK)     
         * [配置权限](/uphone/ios_sdk.md#配置权限) 
     * [接入步骤](/uphone/ios_sdk.md#接入步骤)  
-        * [初始化SDK](/uphone/ios_sdk.md#初始化SDK)           
+        * [初始化SDK](/uphone/ios_sdk.md#初始化SDK)
+        * [初始化云手机](/uphone/ios_sdk.md#初始化云手机)  
+        * [初始化云游戏](/uphone/ios_sdk.md#初始化云游戏)       
     * [接口说明](/uphone/ios_sdk.md#接口说明)
         * [连接云手机](/uphone/ios_sdk.md#连接云手机)  
         * [断开云手机](/uphone/ios_sdk.md#断开云手机)      
@@ -90,6 +92,7 @@
         * [云手机连接失败原因](/uphone/ios_sdk.md#云手机连接失败原因)
         * [云手机连接保活](/uphone/ios_sdk.md#云手机连接保活)
         * [设置音量](/uphone/ios_sdk.md#设置音量)
+        * [创建云游戏实例失败原因](/uphone/ios_sdk.md#创建云游戏实例失败原因)
         * [注意事项](/uphone/ios_sdk.md#注意事项)
  * JS SDK
      * [SDK下载](/uphone/js-sdk.md#SDK下载)
