@@ -53,6 +53,7 @@ JS SDK
   * [API SDK](https://cms-docs.ucloudadmin.com/tools)
 ### 发布更新
   * [更新记录](/uphone/changelog.md)
-. <video id="video" controls="" preload="none" poster="封面">
+  * 
+<video id="video" controls="" preload="none" poster="https://uclub-file.ucloud.cn/uploads/20201203/54ab1a0e868ca97902ed74c88519e870.png">
       <source id="mp4" src="https://www-s.ucloud.cn/2022/09/d26cc47c5ace7f1dfe6f33e57051e9cb_1664356059465.mp4" type="video/mp4">
 </videos>
