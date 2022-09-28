@@ -4,7 +4,7 @@
    * [即刻入手](https://console.ucloud.cn/uphone-retail/uphone/create)
    
 ### 产品介绍   <!-- 以下是参考的目录模版，旨在建议产品文档应该包含的内容模块。实际章节划分可根据实际内容进行调整 -->
-   * [![Watch the video](https://qxb-logo-url-osscache.qixin.com/OriginalUrl/bcd7bd67a67062d33cc7d179aed8d1d7.jpg)](https://www-s.ucloud.cn/2022/09/d26cc47c5ace7f1dfe6f33e57051e9cb_1664356059465.mp4)
+   * [![Watch the video](https://www-s.ucloud.cn/2022/09/ffd82b902f06557d5258c83403ce8276_1664360926685.png)](https://www-s.ucloud.cn/2022/09/d26cc47c5ace7f1dfe6f33e57051e9cb_1664356059465.mp4)
    * [什么是云手机](/uphone/_whatUphone.md)
    * [功能与优势](/uphone/_function.md)
    * [应用场景](/uphone/_application.md)
